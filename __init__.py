@@ -23,7 +23,7 @@ df_query = df[(df['Age'] > 18) & (df['Survived'] == 1)]
 df_query.drop('Survived', axis=1, inplace=True)
 
 # Сортируем по возрасту 
-df_query.sort_values(by=['Age'], ascending=False)
+df_query.sort_values(by=['Age'], inplace=True, ascending=True)
 
 headers = list(df_query.columns)
 items = list(df_query.values)[:10] # Выборка топ 10
