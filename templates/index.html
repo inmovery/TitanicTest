@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/bootstrap.css') }}">
+</head>
+<body style="margin: 10px;">
+	<table class="table table-bordered">
+		<thead class="thead-dark">
+			{% for header in headers %}
+				<th>
+					{{header}}
+				</th>
+			{% endfor %}
+		</thead>
+		<tbody>
+			{% for row in items %}
+				<tr>
+					{% for column in row %}
+						<td>
+							{{column}}	
+						</td>
+					{% endfor %}
+				</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+</body>
+</html>
